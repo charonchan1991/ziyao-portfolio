@@ -1,0 +1,92 @@
+/** Stylus Styles */
+
+@import '../../node_modules/vuetify/src/stylus/main'
+
+html.show-scrollbar
+  overflow-y: scroll !important
+
+.card__text
+  &::-webkit-scrollbar-track
+    background-color: #fcfcfc
+
+  &::-webkit-scrollbar
+    width: 8px
+    height: 8px
+
+  &::-webkit-scrollbar-thumb
+    border-radius: 2px
+    background-color: #ddd
+    border: #ddd 1px solid
+
+.vert-align
+  display: flex
+  align-items: center
+
+.tabs
+  .tabs__item
+    font-weight: 500
+
+.card
+  border-radius: 2.5px !important
+
+.close
+  position: absolute
+  z-index: 9999
+  right: 12px
+  top: 12px
+  opacity: 0.35
+  cursor: pointer
+  transition: 0.3s ease
+
+  &:hover
+    opacity 0.75
+    transform: rotate(180deg)
+
+.hover--blue:hover
+  background: $colors.blue.base !important
+
+.hover--green:hover
+  background: $colors.green.base !important
+
+.hover--orange:hover
+  background: $colors.orange.base !important
+
+.hover--red:hover
+  background: $colors.red.base !important
+
+.hover--teal:hover
+  background: $colors.teal.base !important
+
+.chip--small
+  margin-left: 0
+  padding-left: 8px
+  > i
+    font-size: 18px
+
+p.caption
+  color: #666
+
+h1.display-1
+  text-transform: uppercase
+  line-height: 38px !important
+  margin-bottom: 5px
+
+h2.headline
+  font-size: 18px !important
+  line-height: 22px !important
+  color: #666
+
+.project-time
+  font-size: 16px
+  padding-left: 12px
+  color: #999
+  text-transform: none
+
+.video-responsive
+  width: 100%
+
+  @media screen and (min-width: $grid-breakpoints.sm)
+    min-height: 300px
+
+  @media screen and (min-width: $grid-breakpoints.md)
+    min-height: 388px

@@ -1,0 +1,30 @@
+#canvas{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #dfdfdf;               
+}
+.canvas-wrap{
+    position: relative;
+    overflow: hidden;
+}
+div.canvas-content{
+    position: relative;
+    z-index: 2000;
+    color: #555;
+}
+#unsupported {
+    display: none;
+    padding-top: 100px; 
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+#unsupported > i {
+    font-size: 84px;
+}
+#unsupported > h1 {
+    text-transform: uppercase;
+}
