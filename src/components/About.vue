@@ -12,7 +12,7 @@
       </v-flex>
       <v-flex xs12 md4 mt-2 order-xs1 order-md3 text-xs-center>
         <img
-          alt="ShaReader screenshot"
+          alt="Ziyao"
           class="img-rounded"
           :src="avatarPath"
           width="180px"

@@ -33,149 +33,66 @@
                 </v-chip>
               </div>
             </v-flex>
-            <v-flex xs12 md6 offset-md1 my-3>
-              <v-tabs centered>
-                <v-tabs-bar class="transparent">
-                  <v-tabs-item href="#highlights" @click.native="updateTabHeight">
-                    Highlights
-                  </v-tabs-item>
-                  <v-tabs-item href="#dev">
-                    Dev
-                  </v-tabs-item>
-                  <v-tabs-item href="#ux">
-                    UX/UI
-                  </v-tabs-item>
-                  <v-tabs-item href="#nlp">
-                    ML/NLP
-                  </v-tabs-item>
-                  <v-tabs-item href="#3d">
-                    3D
-                  </v-tabs-item>
-                  <v-tabs-slider></v-tabs-slider>
-                </v-tabs-bar>
-                <v-tabs-items>
-                  <v-tabs-content id="highlights" v-resize="updateTabHeight">
-                    <v-container fluid grid-list-sm>
-                      <v-layout row wrap>
-                        <v-flex d-flex xs12 sm6>
-                          <v-card dark hover to="/projects/magicexif" @click.native.stop="openDialog">
-                            <v-card-media height="100%" src="/static/camera.png">
-                              <v-container fill-height fluid class="display-box hover--blue">
-                                <v-layout row wrap align-content-space-between>
-                                  <v-flex xs12 mb-2>
-                                    <span class="title">MagicEXIF Editor</span>
-                                  </v-flex>
-                                  <v-flex xs12 align-end>
-                                    A powerful toolkit to update EXIF, GPS and other metadata in digital photos.
-                                  </v-flex> 
-                                </v-layout>
-                              </v-container>
-                            </v-card-media>
-                          </v-card>
-                        </v-flex>
-                        <v-flex d-flex xs12 sm6>
-                          <v-layout row wrap>
-                            <v-flex d-flex>
-                              <v-card dark hover to="/projects/shareader" @click.native.stop="openDialog">
-                                <v-card-media height="100%" src="/static/shareader.png">
-                                  <v-container fill-height fluid class="display-box hover--green">
-                                    <v-layout row wrap align-content-space-between>
-                                      <v-flex xs12 mb-2>
-                                        <span class="title">ShaReader</span>
-                                      </v-flex>
-                                      <v-flex xs12 align-end>
-                                        An interactive interface for social e-book applications.
-                                      </v-flex> 
-                                    </v-layout>
-                                  </v-container>
-                                </v-card-media>
-                              </v-card>
-                            </v-flex>
-                            <v-flex d-flex>
-                              <v-layout row wrap>
-                                <v-flex d-flex xs12>
-                                  <v-card dark hover>
-                                    <v-card-media height="100%" src="/static/wps.png">
-                                      <v-container fill-height fluid class="display-box hover--red">
-                                        <v-layout row wrap align-content-space-between>
-                                          <v-flex xs12 mb-2>
-                                            <span class="title">WPS Auto-testing</span>
-                                          </v-flex>
-                                          <v-flex xs12 align-end>
-                                            Python-based test cases for automatic testing tasks for Kingsoft WPS Office.
-                                          </v-flex> 
-                                        </v-layout>
-                                      </v-container>
-                                    </v-card-media>
-                                  </v-card>
-                                </v-flex>
-                              </v-layout>
-                            </v-flex>
-                          </v-layout>
-                        </v-flex>
-                        <v-flex d-flex xs12 sm12>
-                          <v-layout row wrap>
-                            <v-flex d-flex>
-                              <v-card dark hover to="/projects/spam_detector" @click.native.stop="openDialog">
-                                <v-card-media height="100%" src="/static/spam.png">
-                                  <v-container fill-height fluid class="display-box hover--orange">
-                                    <v-layout row wrap align-content-space-between>
-                                      <v-flex xs12 mb-2>
-                                        <span class="title">Twitter Emotion Spam Detector</span>
-                                      </v-flex>
-                                      <v-flex xs12 align-end>
-                                        Analyze tweet content and detect emotion spams (tweets assigned with an emotion hashtag but don't actually express the emotion) with machine learning techniques.
-                                      </v-flex> 
-                                    </v-layout>
-                                  </v-container>
-                                </v-card-media>
-                              </v-card>
-                            </v-flex>
-                            <v-flex d-flex>
-                              <v-layout row wrap>
-                                <v-flex d-flex xs12>
-                                  <v-card dark hover>
-                                    <v-card-media height="100%" src="/static/mazdis.png">
-                                      <v-container fill-height fluid class="display-box hover--teal">
-                                        <v-layout row wrap align-content-space-between>
-                                          <v-flex xs12 mb-2>
-                                            <span class="title">MazDome Renderings</span>
-                                          </v-flex>
-                                          <v-flex xs12 align-end>
-                                            3D modeling and photorealistic renderings for automatic bicycle parking product series of Mazdis Inc.
-                                          </v-flex> 
-                                        </v-layout>
-                                      </v-container>
-                                    </v-card-media>
-                                  </v-card>
-                                </v-flex>
-                              </v-layout>
-                            </v-flex>
-                          </v-layout>
-                        </v-flex>
-                      </v-layout>
-                    </v-container> 
-                  </v-tabs-content>
-                  <v-tabs-content id="dev">
-                    <div>DEV</div>
-                  </v-tabs-content>
-                  <v-tabs-content id="ux">
-                    <div>UX/UI</div>
-                  </v-tabs-content>
-                  <v-tabs-content id="nlp">
-                    <div>ML/NLP</div>
-                  </v-tabs-content>
-                  <v-tabs-content id="3d">
-                    <div>3D</div>
-                  </v-tabs-content>
-                </v-tabs-items>
-              </v-tabs>
-               <div id="quick-links" class="text-xs-center mt-3">
-                <router-link to="/about" @click.native.stop="openDialog">About Me</router-link>
-                <router-link to="/resume" @click.native.stop="openDialog">Résumé</router-link>
-                <router-link to="/collections" @click.native.stop="openDialog">Collections</router-link> 
-              </div> 
+            <v-flex xs12 md6 offset-md1 my-5 text-xs-center v-if="loading">
+              <v-progress-circular
+                indeterminate
+                :size="70"
+                :width="5"
+                color="grey"
+              >
+              </v-progress-circular>
+              <p class="title mt-3 grey--text">PREPARING...</p>
             </v-flex>
+            <v-slide-x-transition>
+              <v-flex xs12 md6 offset-md1 my-3 v-show="!loading">
+                <v-tabs centered>
+                  <v-tabs-bar class="transparent" @click.native="updateTabHeight">
+                    <v-tabs-item href="#highlights">
+                      Highlights
+                    </v-tabs-item>
+                    <v-tabs-item href="#dev">
+                      Dev
+                    </v-tabs-item>
+                    <v-tabs-item href="#ux">
+                      UX/UI
+                    </v-tabs-item>
+                    <v-tabs-item href="#nlp">
+                      ML/NLP
+                    </v-tabs-item>
+                    <v-tabs-item href="#3d">
+                      3D
+                    </v-tabs-item>
+                    <!-- <v-tabs-slider></v-tabs-slider> -->
+                  </v-tabs-bar>
+                  <v-tabs-items>
+                    <v-tabs-content id="highlights" v-resize="updateTabHeight">
+                      <tab-highlights
+                        @openDialog="openDialog"
+                        @tabMounted="onTabMounted"
+                      >
+                      </tab-highlights>
+                    </v-tabs-content>
+                    <v-tabs-content id="dev">
+                      <div>DEV</div>
+                    </v-tabs-content>
+                    <v-tabs-content id="ux">
+                      <div>UX/UI</div>
+                    </v-tabs-content>
+                    <v-tabs-content id="nlp">
+                      <div>ML/NLP</div>
+                    </v-tabs-content>
+                    <v-tabs-content id="3d">
+                      <div>3D</div>
+                    </v-tabs-content>
+                  </v-tabs-items>
+                </v-tabs>
+                <div id="quick-links" class="text-xs-center mt-3">
+                  <router-link to="/about" @click.native.stop="openDialog">About Me</router-link>
+                  <router-link to="/resume" @click.native.stop="openDialog">Résumé</router-link>
+                  <router-link to="/collections" @click.native.stop="openDialog">Collections</router-link> 
+                </div> 
+              </v-flex>
+            </v-slide-x-transition>
           </v-layout>
         </v-container>
       </v-content>
@@ -185,6 +102,7 @@
           <v-card-text :class="{'demo-frame': isDemo}" id="content-frame">
             <router-view :avatar-path="avatarPath" @onDemoMounted="onDemoMounted"></router-view>
           </v-card-text>
+          <div class="frame-shadow"></div>
         </v-card>
       </v-dialog>
     </main>
@@ -192,7 +110,11 @@
 </template>
 
 <script>
+  import TabHighlights from './components/tabs/Highlights'
   export default {
+    components: {
+      'tab-highlights': TabHighlights
+    },
     watch: {
       dialog (value) {
         if (!value) {
@@ -207,7 +129,8 @@
       return {
         tabHeight: 0,
         dialog: false,
-        avatarPath: ''
+        avatarPath: '',
+        loading: true
       }
     },
     computed: {
@@ -216,6 +139,12 @@
       }
     },
     methods: {
+      onTabMounted () {
+        setTimeout(() => {
+          this.loading = false
+          this.updateTabHeight()
+        }, 500)
+      },
       onDemoMounted (e) {
         const frame = document.getElementById('content-frame')
         frame.scrollTop = 0
@@ -282,18 +211,15 @@
       font-style: italic
       color: #999
 
-  .display-box
-    background: #555
-    border-radius: 2px
-    opacity: 0.75
-    -webkit-transition: 0.3s ease
-    transition: 0.3s ease
-
-    &:hover
-      opacity: 1
-
   .popup
     background: url('/static/bg.png')
+  
+  .frame-shadow
+    pointer-events: none
+    position: absolute
+    width: 100%
+    height: 100%
+    box-shadow: inset 0 35px 35px -15px #fcfcfc, inset 0 -35px 35px -15px #fcfcfc 
 
   .demo-frame
     padding: 0 !important

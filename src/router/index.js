@@ -3,8 +3,11 @@ import Router from 'vue-router'
 
 import Demo from '@/components/Demo'
 import About from '@/components/About'
-import ShaReader from '@/components/projects/ShaReader'
+
 import MagicEXIF from '@/components/projects/MagicEXIF'
+import MazDome from '@/components/projects/MazDome'
+import Portfolio from '@/components/projects/Portfolio'
+import ShaReader from '@/components/projects/ShaReader'
 import SpamDetector from '@/components/projects/SpamDetector'
 
 Vue.use(Router)
@@ -32,6 +35,16 @@ export default new Router({
       component: SpamDetector
     },
     {
+      path: '/projects/portfolio',
+      name: 'Portfolio',
+      component: Portfolio
+    },
+    {
+      path: '/projects/mazdome',
+      name: 'MazDome',
+      component: MazDome
+    },
+    {
       path: '/projects/shareader/demo',
       name: 'ShaReaderDemo',
       component: Demo,
@@ -54,7 +67,7 @@ export default new Router({
         width: '100%',
         height: '880px',
         lgOnly: true,
-        instruction: 'Please go to Twitter and search for a public tweet which contains at least one emotion-word hashtag (e.g. <em>#sad</em>, <em>#anger</em>). Simply copy and paste it into the textbox, click the button, and see the magic!'
+        instruction: 'Please go to Twitter and search for a public tweet which contains at least one emotion-word hashtag (e.g. <em>#sad</em>, <em>#anger</em>), or simply copy one of the examples given in the demo. Please make sure you have copied everything in the tweet including all hashtags, links, emojis, and other possible components.'
       }
     },
     {

@@ -1,6 +1,4 @@
-# portfolio
-
-> Ziyao's Portfolio
+# Ziyao's Portfolio
 
 ## Build Setup
 

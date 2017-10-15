@@ -12,10 +12,7 @@
           <v-chip label small class="grey white--text hover--blue" slot="activator"><v-icon left>label</v-icon>SW DEV</v-chip>
           <span>Software Development</span>
         </v-tooltip>
-        <v-tooltip top>
-          <v-chip label small class="grey white--text hover--green" slot="activator"><v-icon left>label</v-icon>UX/UI</v-chip>
-          <span>User Experience/User Interface</span>
-        </v-tooltip>
+        <v-chip label small class="grey white--text hover--green"><v-icon left>label</v-icon>UX/UI</v-chip>
         <v-chip label small class="grey white--text hover--teal"><v-icon left>label</v-icon>Image Processing</v-chip>
         <v-chip label small class="grey white--text hover--orange"><v-icon left>label</v-icon>EXIF</v-chip>
         <v-chip label small class="grey white--text hover--orange"><v-icon left>label</v-icon>GPS</v-chip>

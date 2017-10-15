@@ -2,16 +2,13 @@
   <v-container>
     <v-layout row wrap align-start>
       <v-flex d-flex xs12 mt-2>
-        <h1 class="display-1">ShaReader<span class="project-time hidden-sm-and-down">April, 2015</span></h1>
+        <h1 class="display-1">ShaReader<span class="project-time hidden-sm-and-down">April 2015</span></h1>
       </v-flex>
       <v-flex xs12 my-0>
         <h2 class="headline mb-1">An interactive interface for social e-book applications.</h2>
       </v-flex>
       <v-flex xs12 my-2 text-xs-center text-sm-left>
-        <v-tooltip top>
-          <v-chip label small class="grey white--text hover--green" slot="activator"><v-icon left>label</v-icon>UX/UI</v-chip>
-          <span>User Experience/User Interface</span>
-        </v-tooltip>
+        <v-chip label small class="grey white--text hover--green"><v-icon left>label</v-icon>UX/UI</v-chip>
         <v-tooltip top>
           <v-chip label small class="grey white--text hover--green" slot="activator"><v-icon left>label</v-icon>HCI</v-chip>
           <span>Human-computer Interaction</span>

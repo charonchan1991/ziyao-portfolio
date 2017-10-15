@@ -35,8 +35,8 @@
       indeterminate
       :size="70"
       :width="5"
-      color="blue"
-      v-show="!demoLoaded"
+      color="grey"
+      v-if="!demoLoaded&&showDemo"
       id="demo-loading"
     >
     </v-progress-circular>
