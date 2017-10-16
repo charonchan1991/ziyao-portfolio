@@ -5,7 +5,7 @@
         <h1 class="display-1">Emotion Spam Detector<span class="project-time hidden-sm-and-down">November 2016</span></h1>
       </v-flex>
       <v-flex xs12 my-0>
-        <h2 class="headline mb-1">Analyze tweet content and detect emotion spams.</h2>
+        <h2 class="headline mb-1">Harvest Twitter open data and detect emotion spams by analyzing tweet features.</h2>
       </v-flex>
       <v-flex xs12 my-2 text-xs-center text-sm-left>
         <v-tooltip top>
@@ -37,7 +37,7 @@
         </div>
         <p>My main role in the team was to: 1) harvest Twitter open data given a specific period of time using emotion keywords from the NRC Hashtag Emotion Lexicon <small>(Mohammad and Turney, 2010)</small>; 2) clean and normalize the collected data; 3) analyze the data statistically and help to train a SVM <small>[Support Vector Machine]</small> model to predict emotion spams with NLTK+Scikit-learn packages; 4) participate in the manual labelling process and the final <a href="/static/pdf/spam_detector_report.pdf" target="_blank">term paper</a>. </p>
         <p>This Python-based project has been later adapted to a web app by one of our team members, through which you can have a more intuitive understanding toward the project.</p>
-        <div class="mt-3 text-xs-center">
+        <div class="my-3 text-xs-center">
           <v-btn dark color="primary" to="/projects/spam_detector/demo">
             <v-icon left>pageview</v-icon>
             View Live Demo

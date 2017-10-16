@@ -43,10 +43,10 @@
                     <v-container fill-height fluid class="display-box hover--blue">
                       <v-layout row wrap align-content-space-between>
                         <v-flex xs12 mb-2>
-                          <span class="title">Portfolio</span>
+                          <span class="title">My Portfolio</span>
                         </v-flex>
                         <v-flex xs12 align-end>
-                          A portfolio that demonstrates some of my past and present projects. 
+                          A portfolio that demonstrates some of my past and present projects.
                         </v-flex> 
                       </v-layout>
                     </v-container>
@@ -68,7 +68,7 @@
                       <span class="title">Twitter Emotion Spam Detector</span>
                     </v-flex>
                     <v-flex xs12 align-end>
-                      Harvest Twitter open data and analyze tweet content to detect emotion spams with machine learning techniques.
+                      Harvest Twitter open data and analyze tweet features to detect emotion spams with machine learning techniques.
                     </v-flex> 
                   </v-layout>
                 </v-container>
@@ -109,7 +109,10 @@ export default {
     }
   },
   mounted () {
-    this.$emit('tabMounted')
+    // emit only after the entire view has been rendered
+    this.$nextTick(() => {
+      this.$emit('tabMounted')
+    })
   }
 }
 </script>

@@ -14,8 +14,9 @@
         <img
           alt="Ziyao"
           class="img-rounded"
-          :src="avatarPath"
+          :src="avatar"
           width="180px"
+          @click="photoID = Math.abs(photoID - 1)"
         >
         <div class="contact mt-2">
           <v-icon>mail</v-icon>{{email}}
@@ -25,19 +26,13 @@
         </div>
         <div class="contact mt-2 mb-4">
           <v-tooltip bottom>
-            <v-btn flat icon color="indigo" slot="activator">
-              <v-icon>fa-facebook-official</v-icon>
-            </v-btn>
-            <span>Facebook</span>
-          </v-tooltip>
-          <v-tooltip bottom>
-            <v-btn flat icon color="light-blue darken-1" slot="activator">
+            <v-btn flat icon color="light-blue darken-1" slot="activator" href="https://www.linkedin.com/in/ziyao-chen-25a095b7/" target="_blank">
               <v-icon>fa-linkedin</v-icon>
             </v-btn>
             <span>Linkedin</span>
           </v-tooltip>
           <v-tooltip bottom>
-            <v-btn flat icon color="grey darken-1" slot="activator">
+            <v-btn flat icon color="grey darken-1" slot="activator" href="https://github.com/charonchan1991" target="_blank">
               <v-icon>fa-github</v-icon>
             </v-btn>
             <span>Github</span>
@@ -50,12 +45,23 @@
 
 <script>
 export default {
-  props: ['avatarPath'],
+  data () {
+    return {
+      photoID: 0,
+      clickCount: 0
+    }
+  },
+  created () {
+    this.photoID = (Math.random() < 0.5 ? 0 : 1)
+  },
   computed: {
     email () {
       const uid = 'zychen1991'
       const host = 'gmail.com'
       return uid + '@' + host
+    },
+    avatar () {
+      return '/static/avatar_sm_' + this.photoID + '.jpg'
     }
   }
 }
@@ -77,7 +83,7 @@ export default {
       font-size: 20px
       padding-right: 5px
 
-    & button
+    & a
       margin: 0
 
 </style>

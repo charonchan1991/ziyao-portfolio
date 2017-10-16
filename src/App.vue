@@ -9,7 +9,7 @@
                 <v-avatar size="128px">
                   <img
                     class="img-circle elevation-7 mb-1"
-                    src="/static/avatar_sm_a.jpg"
+                    src="/static/avatar_sm_0.jpg"
                   >
                 </v-avatar>
               </router-link>
@@ -73,7 +73,7 @@
                       </tab-highlights>
                     </v-tabs-content>
                     <v-tabs-content id="dev">
-                      <div>DEV</div>
+                      <tab-project-list @openDialog="openDialog"></tab-project-list>
                     </v-tabs-content>
                     <v-tabs-content id="ux">
                       <div>UX/UI</div>
@@ -100,9 +100,9 @@
         <v-card class="grey lighten-4 popup">
           <div class="close"><v-icon large @click="dialog = false">close</v-icon></div>
           <v-card-text :class="{'demo-frame': isDemo}" id="content-frame">
-            <router-view :avatar-path="avatarPath" @onDemoMounted="onDemoMounted"></router-view>
+            <router-view @onDemoMounted="onDemoMounted"></router-view>
           </v-card-text>
-          <div class="frame-shadow"></div>
+          <div class="frame-shadow" v-show="!isDemo"></div>
         </v-card>
       </v-dialog>
     </main>
@@ -111,16 +111,23 @@
 
 <script>
   import TabHighlights from './components/tabs/Highlights'
+  import TabProjectList from './components/tabs/ProjectList'
   export default {
     components: {
-      'tab-highlights': TabHighlights
+      'tab-highlights': TabHighlights,
+      'tab-project-list': TabProjectList
     },
     watch: {
+      $route (to, from) {
+        if (to.path === '/') this.dialog = false
+      },
       dialog (value) {
         if (!value) {
           // scroll back to top when the dialog is completely closed
           setTimeout(() => {
             document.getElementById('content-frame').scrollTop = 0
+            // update router
+            this.$router.replace('/')
           }, 300)
         }
       }
@@ -129,7 +136,6 @@
       return {
         tabHeight: 0,
         dialog: false,
-        avatarPath: '',
         loading: true
       }
     },
@@ -138,12 +144,15 @@
         return (this.$route.path.slice(-5) === '/demo')
       }
     },
+    created () {
+      if (this.$route.path !== '/') this.dialog = true
+    },
     methods: {
       onTabMounted () {
         setTimeout(() => {
           this.loading = false
           this.updateTabHeight()
-        }, 500)
+        }, 1000)
       },
       onDemoMounted (e) {
         const frame = document.getElementById('content-frame')
@@ -159,7 +168,6 @@
         }
       },
       openDialog () {
-        this.avatarPath = '/static/avatar_sm_' + (Math.random() < 0.5 ? 'a' : 'b') + '.jpg'
         this.dialog = true
       },
       updateTabHeight () {

@@ -41,9 +41,8 @@
         <p class="caption mb-3">Emerging metadata standards are also supported in the latest version of MagicEXIF. This screenshot shows an embedded XMP editor with full syntax highlight support.</p>
         <h3 class="title mt-4">Related Projects</h3>
         <ul class="related-projects">
-          <li><router-link to="/projects/magicexif_new_web">MagicEXIF new website (not yet published)</router-link></li>
+          <li><router-link to="/projects/magicexif_new_web">MagicEXIF website (not yet published)</router-link></li>
           <li><router-link to="/projects/magicexif_validator">MagicEXIF Photo Validator</router-link></li>
-          <li><router-link to="/projects/magicexif_web">MagicEXIF website</router-link></li>
           <li><router-link to="/projects/gps_picker">Online GPS picker</router-link></li>
         </ul>
       </v-flex>

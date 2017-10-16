@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Demo from '@/components/Demo'
 import About from '@/components/About'
+import Demo from '@/components/Demo'
+import PageNotFound from '@/components/PageNotFound'
 
 import MagicEXIF from '@/components/projects/MagicEXIF'
 import MazDome from '@/components/projects/MazDome'
@@ -18,6 +19,10 @@ export default new Router({
       path: '/about',
       name: 'About',
       component: About
+    },
+    {
+      path: '/projects',
+      redirect: '/'
     },
     {
       path: '/projects/shareader',
@@ -76,7 +81,7 @@ export default new Router({
     {
       path: '*',
       name: 'PageNotFound',
-      redirect: '/'
+      component: PageNotFound
     }
   ],
   mode: 'history'

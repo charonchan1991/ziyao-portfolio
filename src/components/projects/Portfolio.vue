@@ -12,7 +12,7 @@
           <v-chip label small class="grey white--text hover--blue" slot="activator"><v-icon left>label</v-icon>Web Dev</v-chip>
           <span>Web Development</span>
         </v-tooltip>
-        <v-chip label small class="grey white--text hover--blue"><v-icon left>label</v-icon>WebApp</v-chip>
+        <v-chip label small class="grey white--text hover--blue"><v-icon left>label</v-icon>Web App</v-chip>
         <v-chip label small class="grey white--text hover--blue"><v-icon left>label</v-icon>Vue.js</v-chip>
         <v-tooltip top>
           <v-chip label small class="grey white--text hover--blue" slot="activator"><v-icon left>label</v-icon>JS (ES6)</v-chip>
@@ -38,7 +38,7 @@
           class="elevation-2"
         />
         <p class="mt-3">I have shared the source code of this project on Github. If you would like to modify the portfolio for your own use, feel free to do so as long as you obey to the terms of the MIT license.</p>
-        <div class="mt-3 text-xs-center">
+        <div class="my-3 text-xs-center">
           <a
             class="btn btn--flat grey lighten-2 grey--text text--darken-2"
             href="https://github.com/charonchan1991/ziyao-portfolio"
