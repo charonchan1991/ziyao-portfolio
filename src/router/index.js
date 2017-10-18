@@ -10,6 +10,7 @@ import MazDome from '@/components/projects/MazDome'
 import Portfolio from '@/components/projects/Portfolio'
 import ShaReader from '@/components/projects/ShaReader'
 import SpamDetector from '@/components/projects/SpamDetector'
+import TodoGo from '@/components/projects/TodoGo'
 
 Vue.use(Router)
 
@@ -38,6 +39,11 @@ export default new Router({
       path: '/projects/spam_detector',
       name: 'SpamDetector',
       component: SpamDetector
+    },
+    {
+      path: '/projects/todogo',
+      name: 'TodoGo',
+      component: TodoGo
     },
     {
       path: '/projects/portfolio',
@@ -73,6 +79,19 @@ export default new Router({
         height: '880px',
         lgOnly: true,
         instruction: 'Please go to Twitter and search for a public tweet which contains at least one emotion-word hashtag (e.g. <em>#sad</em>, <em>#anger</em>), or simply copy one of the examples given in the demo. Please make sure you have copied everything in the tweet including all hashtags, links, emojis, and other possible components.'
+      }
+    },
+    {
+      path: '/projects/todogo/demo',
+      name: 'TodoGoDemo',
+      component: Demo,
+      props: {
+        name: 'TodoGoDemo',
+        url: 'https://chatroom-53e95.firebaseapp.com/',
+        width: '100%',
+        height: '750px',
+        lgOnly: true,
+        instruction: 'Although this is a very simple webapp, it still has pretty much everything that a todo list app should have. I hope you will find it interesting. '
       }
     },
     {

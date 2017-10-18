@@ -15,7 +15,17 @@
               >
               </div>
               <v-list-tile-content>
-                <v-list-tile-title v-html="item.title"></v-list-tile-title>
+                <v-list-tile-title>
+                  {{ item.title }}
+                  <v-chip
+                    label
+                    class="stacks grey white--text hover--blue"
+                    v-for="(stack, k) in item.stacks"
+                    :key="k"
+                  >
+                    {{ stack }}
+                  </v-chip>
+                </v-list-tile-title>
                 <v-list-tile-sub-title v-html="item.subtitle"></v-list-tile-sub-title>
               </v-list-tile-content>
             </v-list-tile>
@@ -35,18 +45,28 @@ export default {
         {
           preview: '/static/portfolio_ss.jpg',
           title: 'My Portfolio',
-          subtitle: 'A portfolio that demonstrates some of my past and present projects.',
+          stacks: ['Vue.js', 'Vuetify'],
+          subtitle: 'A web-based portfolio that demonstrates some of my past and present projects.',
           route: '/projects/portfolio'
         },
         {
-          preview: '/static/mazdis_sabps_2_0.jpg',
+          preview: '/static/mgexf_web_ss.jpg',
           title: 'MagicEXIF Website',
-          subtitle: "<span class='grey--text text--darken-2'>to Alex, Scott, Jennifer</span> — Wish I could come, but I'm out of town this weekend."
+          stacks: ['Vue.js', 'Bootstrap'],
+          subtitle: 'The official website for <em>MagicEXIF Editor</em>. A new version of the website is currently underway.'
         },
         {
-          preview: '/static/mazdis_sabps_2_0.jpg',
+          preview: '/static/gps_picker_ss.jpg',
           title: 'Online GPS Picker',
-          subtitle: "<span class='grey--text text--darken-2'>to Alex, Scott, Jennifer</span> — Wish I could come, but I'm out of town this weekend."
+          stacks: ['Javascript'],
+          subtitle: 'The map component for <em>MagicEXIF Editor</em> which facilitates the user to pick GPS coordinates.'
+        },
+        {
+          preview: '/static/todogo_ss.jpg',
+          title: 'TodoGo',
+          stacks: ['React.js', 'Firebase'],
+          subtitle: 'A simple todo list webapp developed with React.js + Firebase for practice purpose.',
+          route: '/projects/todogo'
         },
         { header: 'Software Development', icon: 'desktop_mac' },
         {
@@ -77,6 +97,12 @@ export default {
     min-width: 125px
     min-height: 70px
     margin-right: 15px
+
+  .stacks
+    margin: 0 5px
+    padding: 1px 8px 0
+    height: 18px
+    font-size: 12px
 
   .project-list
     padding: 4px !important

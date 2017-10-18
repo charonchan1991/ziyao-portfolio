@@ -1,0 +1,70 @@
+<template>
+  <v-container>
+    <v-layout row wrap align-start>
+      <v-flex d-flex xs12 mt-2>
+        <h1 class="display-1">TodoGo<span class="project-time hidden-sm-and-down">December 2016</span></h1>
+      </v-flex>
+      <v-flex xs12 my-0>
+        <h2 class="headline mb-1">A simple todo list webapp developed with React.js + Firebase for practice purpose.</h2>
+      </v-flex>
+      <v-flex xs12 my-2 text-xs-center text-sm-left>
+        <v-tooltip top>
+          <v-chip label small class="grey white--text hover--orange" slot="activator"><v-icon left>label</v-icon>ML</v-chip>
+          <span>Machine Learning</span>
+        </v-tooltip>
+        <v-tooltip top>
+          <v-chip label small class="grey white--text hover--orange" slot="activator"><v-icon left>label</v-icon>NLP</v-chip>
+          <span>Natural Language Processing</span>
+        </v-tooltip>
+        <v-chip label small class="grey white--text hover--orange"><v-icon left>label</v-icon>Text Analytics</v-chip>
+        <v-chip label small class="grey white--text hover--orange"><v-icon left>label</v-icon>Data Mining</v-chip>
+        <v-chip label small class="grey white--text hover--blue"><v-icon left>label</v-icon>Python</v-chip>
+        <v-chip label small class="grey white--text hover--blue" slot="activator"><v-icon left>label</v-icon>NLTK</v-chip>
+        <v-chip label small class="grey white--text hover--blue"><v-icon left>label</v-icon>Scikit-learn</v-chip>
+      </v-flex>
+      <v-flex xs12 mt-2>
+        <p>This is a group project for the course <em>LIBR 559N - Text Analytics</em>. This project would not have been possible without the excellent teamwork among my fellow colleagues Qian Yang <small>(UBC)</small>, Lyla Zhao <small>(UBC)</small>, Alex Hur <small>(UBC)</small>, and of couser, the support from our instructor Prof. Muhammad Abdul-Mageed <small>(UBC)</small>.</p>
+        <p>We noticed that a lot of text data harvested from Twitter contained a considerable amount of spams which not only enlarged the dataset but also reduced its practicalness. In the scenario of studying emotion with Twitter data, we have successfully trained a machine to detect <strong>emotion spams</strong> <small>(tweets assigned with an emotion hashtag but don't actually express the emotion)</small> with an overall accuracy 88.13%. </p>
+        <div class="my-4 text-xs-center">
+          <div style="max-width: 480px; margin: 0 auto;">
+          <img
+            src="/static/todogo_ss.jpg"
+            width="100%"
+            class="elevation-2"
+          />
+          <p class="caption mt-2" style="max-width: 550px;">This example shows when using the keyword <em>#anger</em> to search for public tweets, Twitter returns a lot of emotionless content, which is what we defined as <b>emotion spams</b> here.</p>
+          </div>
+        </div>
+        <p>My main role in the team was to: 1) harvest Twitter open data given a specific period of time using emotion keywords from the NRC Hashtag Emotion Lexicon <small>(Mohammad and Turney, 2010)</small>; 2) clean and normalize the collected data; 3) analyze the data statistically and help to train a SVM <small>[Support Vector Machine]</small> model to predict emotion spams with NLTK+Scikit-learn packages; 4) participate in the manual labelling process and the final <a href="/static/pdf/spam_detector_report.pdf" target="_blank">term paper</a>. </p>
+        <p>This Python-based project has been later adapted to a web app by one of our team members, through which you can have a more intuitive understanding toward the project.</p>
+        <div class="my-3 text-xs-center">
+          <v-btn dark color="primary" to="/projects/todogo/demo">
+            <v-icon left>pageview</v-icon>
+            View Live Demo
+          </v-btn>
+          <a
+            class="btn btn--flat grey lighten-2 grey--text text--darken-2"
+            href="https://github.com/charonchan1991/"
+            target="_blank"
+          >
+            <div class="btn__content">
+              <v-icon left>fa-github</v-icon>
+              Source Code
+            </div>
+          </a>
+        </div>
+      </v-flex>
+    </v-layout>
+  </v-container>
+</template>
+
+<script>
+export default {
+}
+</script>
+
+<style lang="stylus">
+  ul.related-projects
+    li
+      padding-bottom: 5px
+</style>

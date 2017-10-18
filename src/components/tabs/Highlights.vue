@@ -46,7 +46,7 @@
                           <span class="title">My Portfolio</span>
                         </v-flex>
                         <v-flex xs12 align-end>
-                          A portfolio that demonstrates some of my past and present projects.
+                          A web-based portfolio that demonstrates some of my projects.
                         </v-flex> 
                       </v-layout>
                     </v-container>
