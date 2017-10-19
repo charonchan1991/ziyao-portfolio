@@ -8,19 +8,9 @@
         <h2 class="headline mb-1">Harvest Twitter open data and detect emotion spams by analyzing tweet features.</h2>
       </v-flex>
       <v-flex xs12 my-2 text-xs-center text-sm-left>
-        <v-tooltip top>
-          <v-chip label small class="grey white--text hover--orange" slot="activator"><v-icon left>label</v-icon>ML</v-chip>
-          <span>Machine Learning</span>
-        </v-tooltip>
-        <v-tooltip top>
-          <v-chip label small class="grey white--text hover--orange" slot="activator"><v-icon left>label</v-icon>NLP</v-chip>
-          <span>Natural Language Processing</span>
-        </v-tooltip>
-        <v-chip label small class="grey white--text hover--orange"><v-icon left>label</v-icon>Text Analytics</v-chip>
-        <v-chip label small class="grey white--text hover--orange"><v-icon left>label</v-icon>Data Mining</v-chip>
-        <v-chip label small class="grey white--text hover--blue"><v-icon left>label</v-icon>Python</v-chip>
-        <v-chip label small class="grey white--text hover--blue" slot="activator"><v-icon left>label</v-icon>NLTK</v-chip>
-        <v-chip label small class="grey white--text hover--blue"><v-icon left>label</v-icon>Scikit-learn</v-chip>
+        <template v-for="(tag, idx) in tags">
+          <tag-list :tag="tag" :key="idx"></tag-list>
+        </template>
       </v-flex>
       <v-flex xs12 mt-2>
         <p>This is a group project for the course <em>LIBR 559N - Text Analytics</em>. This project would not have been possible without the excellent teamwork among my fellow colleagues Qian Yang <small>(UBC)</small>, Lyla Zhao <small>(UBC)</small>, Alex Hur <small>(UBC)</small>, and of couser, the support from our instructor Prof. Muhammad Abdul-Mageed <small>(UBC)</small>.</p>
@@ -58,13 +48,48 @@
   </v-container>
 </template>
 
+
 <script>
+import TagList from './tags/TagList'
 export default {
+  components: {
+    'tag-list': TagList
+  },
+  data () {
+    return {
+      tags: [
+        {
+          name: 'ML',
+          fullName: 'Machine Learning',
+          color: 'orange'
+        },
+        {
+          name: 'NLP',
+          fullName: 'Natural Language Processing',
+          color: 'orange'
+        },
+        {
+          name: 'Text Analytics',
+          color: 'orange'
+        },
+        {
+          name: 'Data Mining',
+          color: 'orange'
+        },
+        {
+          name: 'Python',
+          color: 'blue'
+        },
+        {
+          name: 'NLTK',
+          color: 'blue'
+        },
+        {
+          name: 'Scikit-learn',
+          color: 'blue'
+        }
+      ]
+    }
+  }
 }
 </script>
-
-<style lang="stylus">
-  ul.related-projects
-    li
-      padding-bottom: 5px
-</style>

@@ -5,6 +5,7 @@ import About from '@/components/About'
 import Demo from '@/components/Demo'
 import PageNotFound from '@/components/PageNotFound'
 
+import GPSPicker from '@/components/projects/GPSPicker'
 import MagicEXIF from '@/components/projects/MagicEXIF'
 import MazDome from '@/components/projects/MazDome'
 import Portfolio from '@/components/projects/Portfolio'
@@ -56,6 +57,11 @@ export default new Router({
       component: MazDome
     },
     {
+      path: '/projects/gps_picker',
+      name: 'GPSPicker',
+      component: GPSPicker
+    },
+    {
       path: '/projects/shareader/demo',
       name: 'ShaReaderDemo',
       component: Demo,
@@ -92,6 +98,18 @@ export default new Router({
         height: '750px',
         lgOnly: true,
         instruction: 'Although this is a very simple webapp, it still has pretty much everything that a todo list app should have. I hope you will find it interesting. '
+      }
+    },
+    {
+      path: '/projects/gps_picker/demo',
+      name: 'GPSPickerDemo',
+      component: Demo,
+      props: {
+        name: 'GPSPickerDemo',
+        url: 'http://www.magicexif.com/_map/main_en.html?agent=MgExf&edit=1&lat=49.2675661507169&lng=-123.25271904245596&zoom=15&',
+        width: '100%',
+        height: '450px',
+        instruction: 'Drag the red pin to start. Click the button at the top-left corner to confirm selection. Below are some of the map services you can choose from: <a href="demo?provider=google_lfl">Google</a> | <a href="demo?provider=google_stl">Google Satellite</a> | <a href="demo?provider=osm">OpenStreetMap</a> | <a href="demo?provider=mapbox">Mapbox</a> | <a href="demo?provider=carto">CartoDB</a> | <a href="demo?provider=esri">Esri</a> | <a href="demo?provider=wiki">Wikimedia</a> | <a href="demo?provider=yandex">Yandex</a> | <a href="demo?provider=baidu">Baidu</a>.'
       }
     },
     {

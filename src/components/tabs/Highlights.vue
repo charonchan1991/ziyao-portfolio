@@ -61,7 +61,7 @@
         <v-layout row wrap>
           <v-flex d-flex>
             <v-card dark hover to="/projects/spam_detector" @click.native.stop="openDialog">
-              <v-card-media height="100%" src="/static/spam.png">
+              <v-card-media height="100%" src="/static/spam.jpg">
                 <v-container fill-height fluid class="display-box hover--orange">
                   <v-layout row wrap align-content-space-between>
                     <v-flex xs12 mb-2>
@@ -76,6 +76,26 @@
             </v-card>
           </v-flex>
           <v-flex d-flex>
+            <v-layout row wrap>
+              <v-flex d-flex xs12>
+                <v-card dark hover to="/projects/aljazeera_v" @click.native.stop="openDialog">
+                  <v-card-media height="100%" src="/static/aljazeera.jpg">
+                    <v-container fill-height fluid class="display-box hover--orange">
+                      <v-layout row wrap align-content-space-between>
+                        <v-flex xs12 mb-2>
+                          <span class="title">Al Jazeera Data Visualization</span>
+                        </v-flex>
+                        <v-flex xs12 align-end>
+                          Visualize and perform visual analytics (VA) on data collected from the Al Jazeera English news network with d3.js and Tableau.
+                        </v-flex> 
+                      </v-layout>
+                    </v-container>
+                  </v-card-media>
+                </v-card>
+              </v-flex>
+            </v-layout>
+          </v-flex>
+          <!-- <v-flex d-flex>
             <v-layout row wrap>
               <v-flex d-flex xs12>
                 <v-card dark hover to="/projects/mazdome" @click.native.stop="openDialog">
@@ -94,7 +114,7 @@
                 </v-card>
               </v-flex>
             </v-layout>
-          </v-flex>
+          </v-flex> -->
         </v-layout>
       </v-flex>
     </v-layout>

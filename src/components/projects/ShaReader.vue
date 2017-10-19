@@ -8,18 +8,9 @@
         <h2 class="headline mb-1">An interactive interface for social e-book applications.</h2>
       </v-flex>
       <v-flex xs12 my-2 text-xs-center text-sm-left>
-        <v-chip label small class="grey white--text hover--green"><v-icon left>label</v-icon>UX/UI</v-chip>
-        <v-tooltip top>
-          <v-chip label small class="grey white--text hover--green" slot="activator"><v-icon left>label</v-icon>HCI</v-chip>
-          <span>Human-computer Interaction</span>
-        </v-tooltip>
-        <v-tooltip top>
-          <v-chip label small class="grey white--text hover--green" slot="activator"><v-icon left>label</v-icon>UCD</v-chip>
-          <span>User-centered Design</span>
-        </v-tooltip>
-        <v-chip label small class="grey white--text hover--red"><v-icon left>label</v-icon>Usability Test</v-chip>
-        <v-chip label small class="grey white--text hover--blue"><v-icon left>label</v-icon>Prototyping</v-chip>
-        <v-chip label small class="grey white--text hover--blue"><v-icon left>label</v-icon>Axure</v-chip>
+        <template v-for="(tag, idx) in tags">
+          <tag-list :tag="tag" :key="idx"></tag-list>
+        </template>
       </v-flex>
       <v-flex xs12 mt-2>
         <iframe
@@ -52,10 +43,42 @@
 </template>
 
 <script>
+import TagList from './tags/TagList'
 export default {
+  components: {
+    'tag-list': TagList
+  },
+  data () {
+    return {
+      tags: [
+        {
+          name: 'UX/UI',
+          color: 'green'
+        },
+        {
+          name: 'HCI',
+          fullName: 'Human-computer Interaction',
+          color: 'green'
+        },
+        {
+          name: 'UCD',
+          fullName: 'User-centered Design',
+          color: 'green'
+        },
+        {
+          name: 'Usability Test',
+          color: 'red'
+        },
+        {
+          name: 'Prototyping',
+          color: 'blue'
+        },
+        {
+          name: 'Axure',
+          color: 'blue'
+        }
+      ]
+    }
+  }
 }
 </script>
-
-<style lang="stylus" scoped>
-
-</style>

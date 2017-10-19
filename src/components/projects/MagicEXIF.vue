@@ -8,15 +8,9 @@
         <h2 class="headline mb-1">A powerful toolkit to update EXIF, GPS and other metadata in digital photos.</h2>
       </v-flex>
       <v-flex xs12 my-2 text-xs-center text-sm-left>
-        <v-tooltip top>
-          <v-chip label small class="grey white--text hover--blue" slot="activator"><v-icon left>label</v-icon>SW DEV</v-chip>
-          <span>Software Development</span>
-        </v-tooltip>
-        <v-chip label small class="grey white--text hover--green"><v-icon left>label</v-icon>UX/UI</v-chip>
-        <v-chip label small class="grey white--text hover--teal"><v-icon left>label</v-icon>Image Processing</v-chip>
-        <v-chip label small class="grey white--text hover--orange"><v-icon left>label</v-icon>EXIF</v-chip>
-        <v-chip label small class="grey white--text hover--orange"><v-icon left>label</v-icon>GPS</v-chip>
-        <v-chip label small class="grey white--text hover--red"><v-icon left>label</v-icon>System Testing</v-chip>
+        <template v-for="(tag, idx) in tags">
+          <tag-list :tag="tag" :key="idx"></tag-list>
+        </template>
       </v-flex>
       <v-flex xs12 mt-2>
         <img
@@ -41,8 +35,8 @@
         <p class="caption mb-3">Emerging metadata standards are also supported in the latest version of MagicEXIF. This screenshot shows an embedded XMP editor with full syntax highlight support.</p>
         <h3 class="title mt-4">Related Projects</h3>
         <ul class="related-projects">
-          <li><router-link to="/projects/magicexif_new_web">MagicEXIF website (not yet published)</router-link></li>
-          <li><router-link to="/projects/magicexif_validator">MagicEXIF Photo Validator</router-link></li>
+          <li><router-link to="/projects/magicexif_web">MagicEXIF website (not yet published)</router-link></li>
+          <li><router-link to="/projects/mgexf_vldt">MagicEXIF Photo Validator</router-link></li>
           <li><router-link to="/projects/gps_picker">Online GPS picker</router-link></li>
         </ul>
       </v-flex>
@@ -51,7 +45,42 @@
 </template>
 
 <script>
+import TagList from './tags/TagList'
 export default {
+  components: {
+    'tag-list': TagList
+  },
+  data () {
+    return {
+      tags: [
+        {
+          name: 'SW Dev',
+          fullName: 'Software Development',
+          color: 'blue'
+        },
+        {
+          name: 'UX/UI',
+          color: 'green'
+        },
+        {
+          name: 'Image Processing',
+          color: 'teal'
+        },
+        {
+          name: 'EXIF',
+          color: 'orange'
+        },
+        {
+          name: 'GPS',
+          color: 'orange'
+        },
+        {
+          name: 'System Testing',
+          color: 'red'
+        }
+      ]
+    }
+  }
 }
 </script>
 

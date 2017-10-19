@@ -23,7 +23,7 @@
                   <v-icon left>color_lens</v-icon>UX/UI Designer
                 </v-chip>
                 <v-chip label class="grey white--text hover--orange">
-                  <v-icon left>dns</v-icon>Data Analyst (ML &amp; NLP)
+                  <v-icon left>dns</v-icon>Data Analyst (ML &amp; VA)
                 </v-chip>
                 <v-chip label class="grey white--text hover--red">
                   <v-icon left>bug_report</v-icon>Test Engineer
@@ -54,10 +54,10 @@
                       Dev
                     </v-tabs-item>
                     <v-tabs-item href="#ux">
-                      UX/UI
+                      UX/VA
                     </v-tabs-item>
-                    <v-tabs-item href="#nlp">
-                      ML/NLP
+                    <v-tabs-item href="#ml">
+                      ML
                     </v-tabs-item>
                     <v-tabs-item href="#3d">
                       3D
@@ -73,16 +73,16 @@
                       </tab-highlights>
                     </v-tabs-content>
                     <v-tabs-content id="dev">
-                      <tab-project-list @openDialog="openDialog"></tab-project-list>
+                      <tab-dev @openDialog="openDialog"></tab-dev>
                     </v-tabs-content>
                     <v-tabs-content id="ux">
-                      <div>UX/UI</div>
+                      <tab-ux @openDialog="openDialog"></tab-ux>
                     </v-tabs-content>
-                    <v-tabs-content id="nlp">
-                      <div>ML/NLP</div>
+                    <v-tabs-content id="ml">
+                      <tab-ml @openDialog="openDialog"></tab-ml>
                     </v-tabs-content>
                     <v-tabs-content id="3d">
-                      <div>3D</div>
+                      <tab-3d @openDialog="openDialog"></tab-3d>
                     </v-tabs-content>
                   </v-tabs-items>
                 </v-tabs>
@@ -111,11 +111,17 @@
 
 <script>
   import TabHighlights from './components/tabs/Highlights'
-  import TabProjectList from './components/tabs/ProjectList'
+  import TabDev from './components/tabs/Dev'
+  import TabUX from './components/tabs/UX'
+  import TabML from './components/tabs/ML'
+  import Tab3D from './components/tabs/3D'
   export default {
     components: {
       'tab-highlights': TabHighlights,
-      'tab-project-list': TabProjectList
+      'tab-dev': TabDev,
+      'tab-ux': TabUX,
+      'tab-ml': TabML,
+      'tab-3d': Tab3D
     },
     watch: {
       $route (to, from) {
@@ -128,7 +134,7 @@
             document.getElementById('content-frame').scrollTop = 0
             // update router
             this.$router.replace('/')
-          }, 300)
+          }, 250)
         }
       }
     },

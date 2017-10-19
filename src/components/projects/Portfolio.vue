@@ -8,21 +8,9 @@
         <h2 class="headline mb-1">A portfolio that demonstrates some of my past and present projects.</h2>
       </v-flex>
       <v-flex xs12 my-2 text-xs-center text-sm-left>
-        <v-tooltip top>
-          <v-chip label small class="grey white--text hover--blue" slot="activator"><v-icon left>label</v-icon>Web Dev</v-chip>
-          <span>Web Development</span>
-        </v-tooltip>
-        <v-chip label small class="grey white--text hover--blue"><v-icon left>label</v-icon>Web App</v-chip>
-        <v-chip label small class="grey white--text hover--blue"><v-icon left>label</v-icon>Vue.js</v-chip>
-        <v-tooltip top>
-          <v-chip label small class="grey white--text hover--blue" slot="activator"><v-icon left>label</v-icon>JS (ES6)</v-chip>
-          <span>JavaScript ES6</span>
-        </v-tooltip>
-        <v-chip label small class="grey white--text hover--blue"><v-icon left>label</v-icon>Vuetify</v-chip>
-        <v-chip label small class="grey white--text hover--blue"><v-icon left>label</v-icon>Webpack</v-chip>
-        <v-chip label small class="grey white--text hover--blue"><v-icon left>label</v-icon>HTML5</v-chip>
-        <v-chip label small class="grey white--text hover--green"><v-icon left>label</v-icon>UX/UI</v-chip>
-        <v-chip label small class="grey white--text hover--green"><v-icon left>label</v-icon>Responsive Design</v-chip>
+        <template v-for="(tag, idx) in tags">
+          <tag-list :tag="tag" :key="idx"></tag-list>
+        </template>
       </v-flex>
       <v-flex xs12 mt-2>
         <img
@@ -56,12 +44,54 @@
 </template>
 
 <script>
+import TagList from './tags/TagList'
 export default {
+  components: {
+    'tag-list': TagList
+  },
+  data () {
+    return {
+      tags: [
+        {
+          name: 'Web Dev',
+          fullName: 'Web Development',
+          color: 'blue'
+        },
+        {
+          name: 'Web App',
+          color: 'blue'
+        },
+        {
+          name: 'Frontend',
+          color: 'blue'
+        },
+        {
+          name: 'Vue.js',
+          color: 'blue'
+        },
+        {
+          name: 'Vuetify',
+          color: 'blue'
+        },
+        {
+          name: 'JS (ES6)',
+          fullName: 'JavaScript ES6',
+          color: 'blue'
+        },
+        {
+          name: 'HTML5',
+          color: 'blue'
+        },
+        {
+          name: 'UX/UI',
+          color: 'green'
+        },
+        {
+          name: 'Responsive Design',
+          color: 'green'
+        }
+      ]
+    }
+  }
 }
 </script>
-
-<style lang="stylus">
-  ul.related-projects
-    li
-      padding-bottom: 5px
-</style>

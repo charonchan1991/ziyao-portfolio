@@ -8,15 +8,9 @@
         <h2 class="headline mb-1">Photorealistic renderings for the automatic bike-parking products of Mazdis Inc.</h2>
       </v-flex>
       <v-flex xs12 my-2 text-xs-center text-sm-left>
-        <v-chip label small class="grey white--text hover--teal"><v-icon left>label</v-icon>3D</v-chip>
-        <v-tooltip top>
-          <v-chip label small class="grey white--text hover--teal" slot="activator"><v-icon left>label</v-icon>VR/AR</v-chip>
-          <span>Virtual Reality / Augmented Reality</span>
-        </v-tooltip>
-        <v-chip label small class="grey white--text hover--teal"><v-icon left>label</v-icon>Image Processing</v-chip>
-        <v-chip label small class="grey white--text hover--blue"><v-icon left>label</v-icon>Blender</v-chip>
-        <v-chip label small class="grey white--text hover--blue"><v-icon left>label</v-icon>Cycles</v-chip>
-        <v-chip label small class="grey white--text hover--blue"><v-icon left>label</v-icon>Sketchfab</v-chip>
+        <template v-for="(tag, idx) in tags">
+          <tag-list :tag="tag" :key="idx"></tag-list>
+        </template>
       </v-flex>
       <v-flex xs12 mt-2>
         <p>These are some of renderings that I created for Mazdis Inc. during my co-op period. Mazdis Inc. is a Vancouver-based startup company that designs and engineers innovative automatic bicycle parking systems.</p>
@@ -52,12 +46,43 @@
 </template>
 
 <script>
+import TagList from './tags/TagList'
 export default {
+  components: {
+    'tag-list': TagList
+  },
+  data () {
+    return {
+      tags: [
+        {
+          name: '3D',
+          color: 'teal'
+        },
+        {
+          name: 'VR/AR',
+          fullName: 'Virtual Reality / Augmented Reality',
+          color: 'teal'
+        },
+        {
+          name: 'Image Processing',
+          color: 'teal'
+        },
+        {
+          name: 'Blender',
+          color: 'blue'
+        },
+        {
+          name: 'Cycles',
+          fullName: 'Cycles Renderer',
+          color: 'blue'
+        },
+        {
+          name: 'Sketchfab',
+          color: 'blue'
+        }
+      ]
+    }
+  }
 }
 </script>
 
-<style lang="stylus">
-  ul.related-projects
-    li
-      padding-bottom: 5px
-</style>

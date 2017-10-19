@@ -22,7 +22,7 @@
     </v-tooltip>
     <iframe
       id="demo"
-      :src="url"
+      :src="url + queryString"
       frameborder="0"
       :width="width"
       :height="height"
@@ -60,7 +60,13 @@ export default {
   data () {
     return {
       parentWdith: 0,
-      demoLoaded: false
+      demoLoaded: false,
+      queryString: ''
+    }
+  },
+  created () {
+    if (this.$route.query) {
+      this.queryString = this.toQueryString(this.$route.query)
     }
   },
   mounted () {
@@ -84,12 +90,18 @@ export default {
     },
     onBack () {
       this.$router.go(-1)
+    },
+    toQueryString (paramsObject) {
+      return Object
+        .keys(paramsObject)
+        .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(paramsObject[key])}`)
+        .join('&')
     }
   }
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus" >
 
   .btn--float
     position: absolute
@@ -103,6 +115,9 @@ export default {
     bottom: 0
     width: 100%
     background: rgba(150,150,150,0.9)
+
+    a
+      color: #fff !important
 
   #demo-loading
     position: absolute
