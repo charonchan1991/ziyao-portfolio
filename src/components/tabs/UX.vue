@@ -30,7 +30,7 @@ export default {
           route: '/projects/shareader'
         },
         {
-          preview: '/static/utips.png',
+          preview: '/static/utips_sm.png',
           title: 'UTips',
           stacks: ['Photoshop'],
           subtitle: 'User interface design for UTips, an app that focuses on on-campus information.',
@@ -40,7 +40,7 @@ export default {
           preview: '/static/doc_design.png',
           title: 'How I Arrived at UBC',
           stacks: ['PowerPoint'],
-          subtitle: 'Coursework for Document Design whose aim is to apply common design elements to a presentation document.',
+          subtitle: 'Coursework for a Document Design class whose aim was to apply common design elements to a presentation doc.',
           route: '/projects/doc_design'
         },
         { header: 'Visual Analytics', icon: 'bubble_chart' },
@@ -49,7 +49,7 @@ export default {
           title: 'Al Jazeera Data Visualization',
           stacks: ['d3.js', 'Tableau'],
           subtitle: 'Visualizing and perform visual analytics (VA) on data collected from the Al Jazeera English news network.',
-          route: '/projects/aljazeera_v'
+          route: '/projects/aljazeera_va'
         }
       ]
     }

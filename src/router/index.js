@@ -5,6 +5,10 @@ import About from '@/components/About'
 import Demo from '@/components/Demo'
 import PageNotFound from '@/components/PageNotFound'
 
+import AlJazeeraVA from '@/components/projects/AlJazeeraVA'
+import Bedroom from '@/components/projects/Bedroom'
+import Booth from '@/components/projects/Booth'
+import DocDesign from '@/components/projects/DocDesign'
 import GPSPicker from '@/components/projects/GPSPicker'
 import MagicEXIF from '@/components/projects/MagicEXIF'
 import MazDome from '@/components/projects/MazDome'
@@ -12,6 +16,7 @@ import Portfolio from '@/components/projects/Portfolio'
 import ShaReader from '@/components/projects/ShaReader'
 import SpamDetector from '@/components/projects/SpamDetector'
 import TodoGo from '@/components/projects/TodoGo'
+import UTips from '@/components/projects/UTips'
 
 Vue.use(Router)
 
@@ -62,6 +67,31 @@ export default new Router({
       component: GPSPicker
     },
     {
+      path: '/projects/aljazeera_va',
+      name: 'AlJazeeraVA',
+      component: AlJazeeraVA
+    },
+    {
+      path: '/projects/bedroom',
+      name: 'Bedroom',
+      component: Bedroom
+    },
+    {
+      path: '/projects/booth',
+      name: 'Booth',
+      component: Booth
+    },
+    {
+      path: '/projects/utips',
+      name: 'UTips',
+      component: UTips
+    },
+    {
+      path: '/projects/doc_design',
+      name: 'DocDesign',
+      component: DocDesign
+    },
+    {
       path: '/projects/shareader/demo',
       name: 'ShaReaderDemo',
       component: Demo,
@@ -98,6 +128,19 @@ export default new Router({
         height: '750px',
         lgOnly: true,
         instruction: 'Although this is a very simple webapp, it still has pretty much everything that a todo list app should have. I hope you will find it interesting. '
+      }
+    },
+    {
+      path: '/projects/aljazeera_va/demo',
+      name: 'D3Demo',
+      component: Demo,
+      props: {
+        name: 'D3Demo',
+        url: 'http://www.magicexif.com/portfolio/chord/',
+        width: '100%',
+        height: '620px',
+        lgOnly: true,
+        instruction: ''
       }
     },
     {

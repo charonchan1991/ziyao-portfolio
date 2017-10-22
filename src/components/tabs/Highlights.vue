@@ -78,7 +78,7 @@
           <v-flex d-flex>
             <v-layout row wrap>
               <v-flex d-flex xs12>
-                <v-card dark hover to="/projects/aljazeera_v" @click.native.stop="openDialog">
+                <v-card dark hover to="/projects/aljazeera_va" @click.native.stop="openDialog">
                   <v-card-media height="100%" src="/static/aljazeera.jpg">
                     <v-container fill-height fluid class="display-box hover--orange">
                       <v-layout row wrap align-content-space-between>

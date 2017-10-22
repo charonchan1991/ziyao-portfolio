@@ -60,7 +60,7 @@
                       ML
                     </v-tabs-item>
                     <v-tabs-item href="#3d">
-                      3D
+                      3D/VR
                     </v-tabs-item>
                     <!-- <v-tabs-slider></v-tabs-slider> -->
                   </v-tabs-bar>

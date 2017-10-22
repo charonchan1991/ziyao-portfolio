@@ -14,7 +14,7 @@
       </v-flex>
       <v-flex xs12 mt-2>
         <p>These are some of renderings that I created for Mazdis Inc. during my co-op period. Mazdis Inc. is a Vancouver-based startup company that designs and engineers innovative automatic bicycle parking systems.</p>
-        <p>3D models for these conceptual products were created with Blender. The photorealistic images were rendered with the Cycles renderer and enhanced with Adobe Photoshop. Animations were also created for use in the Sketchfab VR experience. However, due to commercial reasons, these VR animations are not available in this portfollio.</p>
+        <p>3D models for these conceptual products were created with Blender. The photorealistic images were rendered with the Cycles renderer and enhanced with Adobe Photoshop. Animations to demonstrate how the system works were also created for use in the Sketchfab VR experience. However, due to commercial reasons, these VR animations are not available in this portfollio.</p>
         <img
           src="/static/mazdis_sabps_2_0.jpg"
           width="100%"

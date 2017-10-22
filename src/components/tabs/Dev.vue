@@ -25,16 +25,20 @@ export default {
         {
           preview: '/static/magicexif_ss.png',
           title: 'MagicEXIF Editor',
-          stacks: ['Visual Basic'],
           subtitle: 'A powerful toolkit to update EXIF, GPS and other metadata in digital photos.',
           route: '/projects/magicexif'
         },
         {
-          preview: '/static/mgexf_vldt_ss_5.png',
+          preview: '/static/mgexf_vldt.png',
           title: 'MagicEXIF Photo Validator',
-          stacks: ['Visual Basic'],
           subtitle: 'Test a digital photo if it is an original or has been modified since taken out from the camera.',
           route: '/projects/mgexf_vldt'
+        },
+        {
+          preview: '/static/photo2punch.jpg',
+          title: 'Photo2Punch',
+          subtitle: 'Photo2Punch is an image-to-perforation software that can easily create AutoCAD files ready for punching.',
+          route: '/projects/photo2punch'
         },
         { header: 'Web Development', icon: 'public' },
         {
