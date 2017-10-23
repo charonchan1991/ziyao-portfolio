@@ -13,7 +13,7 @@
         </template>
       </v-flex>
       <v-flex xs12 mt-2>
-        <p>This is very simple todo list webapp developed for practice purpose. You can easily add, edit, check, and delete a todo in this webapp. The frontend is built with React.js while the backend is Firebase. Bootstrap is also used for the responsive layout. Full source code of this project is available on Github if you are interested.</p>
+        <p>This is a very simple todo list webapp developed for practice purpose. You can easily add, edit, check, and delete a todo in this webapp. The frontend is built with React.js while the backend is Firebase. Bootstrap is also used for the responsive layout. Full source code of this project is available on Github if you are interested.</p>
         <img
           src="/static/todogo_ss.jpg"
           width="100%"

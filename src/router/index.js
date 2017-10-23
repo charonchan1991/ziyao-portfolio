@@ -97,7 +97,7 @@ export default new Router({
       component: Demo,
       props: {
         name: 'ShaReader',
-        url: 'http://94gl6u.axshare.com/page_a1.html#p=content&c=1',
+        url: 'https://94gl6u.axshare.com/page_a1.html#p=content&c=1',
         width: '768px',
         height: '1042px',
         lgOnly: true,
@@ -136,7 +136,7 @@ export default new Router({
       component: Demo,
       props: {
         name: 'D3Demo',
-        url: 'http://www.magicexif.com/portfolio/chord/',
+        url: '/demo/chord/',
         width: '100%',
         height: '620px',
         lgOnly: true,
@@ -149,7 +149,7 @@ export default new Router({
       component: Demo,
       props: {
         name: 'GPSPickerDemo',
-        url: 'http://www.magicexif.com/_map/main_en.html?agent=MgExf&edit=1&lat=49.2675661507169&lng=-123.25271904245596&zoom=15&',
+        url: '/demo/map/?agent=MgExf&edit=1&lat=49.2675661507169&lng=-123.25271904245596&zoom=15&',
         width: '100%',
         height: '450px',
         instruction: 'Drag the red pin to start. Click the button at the top-left corner to confirm selection. Below are some of the map services you can choose from: <a href="demo?provider=google_lfl">Google</a> | <a href="demo?provider=google_stl">Google Satellite</a> | <a href="demo?provider=osm">OpenStreetMap</a> | <a href="demo?provider=mapbox">Mapbox</a> | <a href="demo?provider=carto">CartoDB</a> | <a href="demo?provider=esri">Esri</a> | <a href="demo?provider=wiki">Wikimedia</a> | <a href="demo?provider=yandex">Yandex</a> | <a href="demo?provider=baidu">Baidu</a>.'

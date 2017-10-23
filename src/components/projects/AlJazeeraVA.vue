@@ -17,7 +17,7 @@
         <p>D3.js is a JavaScript library for visualizing data with HTML, SVG, and CSS. The d3.js library provides various stunning interactive visualization types. I chose a Chord diagram and a Sankey chart for this project. Tableau was also used to create a stream graph and perform geospatial analysis. If you would like to know more about the project, you can download the final project poster below.</p>
         <div class="my-4 text-xs-center">
           <iframe
-            src="http://www.magicexif.com/portfolio/chord/"
+            src="/demo/chord/"
             class="chord mb-0 hidden-sm-and-down"
             frameborder="0"
             webkitallowfullscreen
