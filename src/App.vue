@@ -147,7 +147,7 @@
     },
     computed: {
       isDemo () {
-        return (this.$route.path.slice(-5) === '/demo')
+        return (this.$route.path.slice(-5) === '/demo' || this.$route.path === '/resume')
       }
     },
     created () {

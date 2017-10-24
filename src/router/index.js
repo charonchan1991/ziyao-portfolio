@@ -28,6 +28,10 @@ export default new Router({
       component: About
     },
     {
+      path: '/demo',
+      redirect: '/'
+    },
+    {
       path: '/projects',
       redirect: '/'
     },
@@ -90,6 +94,19 @@ export default new Router({
       path: '/projects/doc_design',
       name: 'DocDesign',
       component: DocDesign
+    },
+    {
+      path: '/resume',
+      name: 'Resume',
+      component: Demo,
+      props: {
+        name: 'resume',
+        url: '/static/pdf/resume_ziyao.pdf',
+        width: '768px',
+        height: '750px',
+        lgOnly: true,
+        instruction: ''
+      }
     },
     {
       path: '/projects/shareader/demo',

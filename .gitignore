@@ -6,6 +6,7 @@ firebase.json
 logs
 *.log
 npm-debug.log*
+*.pdf
 
 # Runtime data
 pids
