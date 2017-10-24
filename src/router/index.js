@@ -114,7 +114,7 @@ export default new Router({
         width: '100%',
         height: '880px',
         lgOnly: true,
-        instruction: 'Please go to Twitter and search for a public tweet which contains at least one emotion-word hashtag (e.g. <em>#sad</em>, <em>#anger</em>), or simply copy one of the examples given in the demo. Please make sure you have copied everything in the tweet including all hashtags, links, emojis, and other possible components.'
+        instruction: 'It may take a while for the page to finish loading.<br/>Please go to Twitter and search for a public tweet which contains at least one emotion-word hashtag (e.g. <em>#sad</em>, <em>#anger</em>), or simply copy one of the examples given in the demo. Please make sure you have copied everything in the tweet including all hashtags, links, emojis, and other possible components.'
       }
     },
     {
