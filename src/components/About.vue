@@ -26,7 +26,7 @@
         </div>
         <div class="contact mt-2 mb-4">
           <v-tooltip bottom>
-            <v-btn flat icon color="light-blue darken-1" slot="activator" href="www.linkedin.com/in/ziyao-chen/" target="_blank">
+            <v-btn flat icon color="light-blue darken-1" slot="activator" href="https://www.linkedin.com/in/ziyao-chen/" target="_blank">
               <v-icon>fa-linkedin</v-icon>
             </v-btn>
             <span>Linkedin</span>
