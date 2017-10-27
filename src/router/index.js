@@ -11,7 +11,9 @@ import Booth from '@/components/projects/Booth'
 import DocDesign from '@/components/projects/DocDesign'
 import GPSPicker from '@/components/projects/GPSPicker'
 import MagicEXIF from '@/components/projects/MagicEXIF'
+import MgExfVldt from '@/components/projects/MgExfVldt'
 import MazDome from '@/components/projects/MazDome'
+import Photo2Punch from '@/components/projects/Photo2Punch'
 import Portfolio from '@/components/projects/Portfolio'
 import ShaReader from '@/components/projects/ShaReader'
 import SpamDetector from '@/components/projects/SpamDetector'
@@ -46,6 +48,11 @@ export default new Router({
       component: MagicEXIF
     },
     {
+      path: '/projects/mgexf_vldt',
+      name: 'MgExfVldt',
+      component: MgExfVldt
+    },
+    {
       path: '/projects/spam_detector',
       name: 'SpamDetector',
       component: SpamDetector
@@ -59,6 +66,11 @@ export default new Router({
       path: '/projects/portfolio',
       name: 'Portfolio',
       component: Portfolio
+    },
+    {
+      path: '/projects/photo2punch',
+      name: 'Photo2Punch',
+      component: Photo2Punch
     },
     {
       path: '/projects/mazdome',
