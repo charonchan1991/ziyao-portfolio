@@ -37,7 +37,7 @@ export default {
         {
           preview: '/static/photo2punch.jpg',
           title: 'Photo2Punch',
-          subtitle: 'Photo2Punch is an image-to-perforation software that can easily create AutoCAD files ready for punching.',
+          subtitle: 'An image-to-perforation software that can easily create AutoCAD files ready for metal perforation.',
           route: '/projects/photo2punch'
         },
         { header: 'Web Development', icon: 'public' },
@@ -56,9 +56,9 @@ export default {
           route: '/projects/todogo'
         },
         {
-          preview: '/static/mgexf_web_ss.jpg',
+          preview: '/static/mgexf_web.jpg',
           title: 'MagicEXIF Website',
-          stacks: ['Vue.js', 'Bootstrap'],
+          stacks: ['Vue.js', 'Wilddog'],
           subtitle: 'The official website for <em>MagicEXIF Editor</em>. A new version of the website is currently underway.',
           route: '/projects/magicexif_web'
         },

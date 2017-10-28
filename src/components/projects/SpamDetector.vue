@@ -26,7 +26,7 @@
           </div>
         </div>
         <p>My main role in the team was to: 1) harvest Twitter open data given a specific period of time using emotion keywords from the NRC Hashtag Emotion Lexicon <small>(Mohammad and Turney, 2010)</small>; 2) clean and normalize the collected data; 3) analyze the data statistically and help to train a SVM <small>[Support Vector Machine]</small> model to predict emotion spams with NLTK+Scikit-learn packages; 4) participate in the manual labelling process and the final <a href="/static/pdf/spam_detector_report.pdf" target="_blank">term paper</a>. </p>
-        <p>This Python-based project has been later adapted to a webapp by one of our team members Qian Yang, through which you can have a more intuitive understanding toward the project.</p>
+        <p>This Python-based project has been later adapted to a webapp by one of our team members, Qian Yang, and through which I hope you will have a more intuitive understanding toward the project.</p>
         <div class="my-3 text-xs-center">
           <v-btn dark color="primary" to="/projects/spam_detector/demo">
             <v-icon left>pageview</v-icon>

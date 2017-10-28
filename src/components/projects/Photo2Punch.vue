@@ -14,12 +14,22 @@
       </v-flex>
       <v-flex xs12 mt-2>
         <img
+          src="/static/photo2punch_demo.png"
+          width="100%"
+          class="mb-3"
+        />
+        <p>This project was created at the request of a startup perforation artwork company in Dongguan, China.</p>
+        <p><strong>Photo2Punch</strong> is a CAD software used to generate custom perforated patterns based on virtually any digital image document. It allows users to change parameters such as hole number, size, shape, and clusters to create fully custom hole patterns. The perforated pattern can then be converted into an AutoCAD DWG file format for the manufacturing process.</p>
+        <img
           src="/static/photo2punch.jpg"
+          width="100%"
+          class="elevation-2 mb-2"
+        />
+        <img
+          src="/static/photo2punch_ss_2.jpg"
           width="100%"
           class="elevation-2 mb-3"
         />
-        <p>This project was created at the request of a startup perforation artwork company in Dongguan, China.</p>
-        <p><strong>Photo2Punch</strong> is a CAD software used to generate custom perforated patterns based on virtually any digital image document. It allows users to change parameters such as hole number, size, shape, and clusters to create fully custom hole patterns. The perforated pattern can then be converted into a DWG file format for the manufacturing process.</p>
       </v-flex>
     </v-layout>
   </v-container>
