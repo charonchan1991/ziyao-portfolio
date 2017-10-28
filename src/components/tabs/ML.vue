@@ -33,7 +33,7 @@ export default {
           preview: '/static/aljazeera_2.jpg',
           title: 'Harvesting Al Jazeera News',
           stacks: ['Excel', 'VBA'],
-          subtitle: 'Automatically harvest news data (e.g. body text, user-generated comments) from the Al Jazeera English news network.',
+          subtitle: 'Harvest news data (e.g. body text, user-generated comments) from the Al Jazeera English news network.',
           route: '/projects/aljazeera'
         }
       ]

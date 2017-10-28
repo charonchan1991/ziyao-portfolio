@@ -59,7 +59,7 @@ export default {
           preview: '/static/mgexf_web.jpg',
           title: 'MagicEXIF Website',
           stacks: ['Vue.js', 'Wilddog'],
-          subtitle: 'The official website for <em>MagicEXIF Editor</em>. A new version of the website is currently underway.',
+          subtitle: 'The new website for MagicEXIF products with a complete user console system.',
           route: '/projects/magicexif_web'
         },
         {

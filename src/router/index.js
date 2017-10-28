@@ -5,6 +5,7 @@ import About from '@/components/About'
 import Demo from '@/components/Demo'
 import PageNotFound from '@/components/PageNotFound'
 
+import AlJazeera from '@/components/projects/AlJazeera'
 import AlJazeeraVA from '@/components/projects/AlJazeeraVA'
 import Bedroom from '@/components/projects/Bedroom'
 import Booth from '@/components/projects/Booth'
@@ -12,6 +13,7 @@ import DocDesign from '@/components/projects/DocDesign'
 import GPSPicker from '@/components/projects/GPSPicker'
 import MagicEXIF from '@/components/projects/MagicEXIF'
 import MgExfVldt from '@/components/projects/MgExfVldt'
+import MgExfWeb from '@/components/projects/MgExfWeb'
 import MazDome from '@/components/projects/MazDome'
 import Photo2Punch from '@/components/projects/Photo2Punch'
 import Portfolio from '@/components/projects/Portfolio'
@@ -53,6 +55,11 @@ export default new Router({
       component: MgExfVldt
     },
     {
+      path: '/projects/magicexif_web',
+      name: 'MgExfWeb',
+      component: MgExfWeb
+    },
+    {
       path: '/projects/spam_detector',
       name: 'SpamDetector',
       component: SpamDetector
@@ -81,6 +88,11 @@ export default new Router({
       path: '/projects/gps_picker',
       name: 'GPSPicker',
       component: GPSPicker
+    },
+    {
+      path: '/projects/aljazeera',
+      name: 'AlJazeera',
+      component: AlJazeera
     },
     {
       path: '/projects/aljazeera_va',
